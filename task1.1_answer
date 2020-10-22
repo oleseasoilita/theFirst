@@ -1,11 +1,15 @@
-$ cd /home 
-$ ls
-$ cd olesea
-$ ls
-$ cd Documents
-$ ls
-$ cd theFirst
-$ git init
+$ sudo mkdir /home/olesea/Documents/theFirst
+$ cd /home
+olesea@olesea-VirtualBox:/home$ ls
+olesea
+olesea@olesea-VirtualBox:/home$ cd olesea
+olesea@olesea-VirtualBox:~$ ls
+autotests  Documents  examples.desktop  Pictures  snap       Videos
+Desktop    Downloads  Music             Public    Templates
+olesea@olesea-VirtualBox:~$ cd Documents
+olesea@olesea-VirtualBox:~/Documents$ ls
+olesea  theFirst
+olesea@olesea-VirtualBox:~/Documents$ cd theFirst
 
 $ git config --global user.name "Шоилица Олеся"
 $ git config --global user.email 'o.carpov@reg.ru'
@@ -41,4 +45,117 @@ Untracked files:
 	.gitignore
 
 no changes added to commit (use "git add" and/or "git commit -a")
+
+
+
+
+
+$ git add fileA
+olesea@olesea-VirtualBox:~/Downloads/second$ git commit -m 'fileA'
+[master a848eb9] fileA
+ 1 file changed, 2 insertions(+)
+ create mode 100644 fileA
+
+$ git add fileB
+olesea@olesea-VirtualBox:~/Downloads/second$ git commit -m 'fileB'
+[master a848eb9] fileB
+ 1 file changed, 2 insertions(+)
+ create mode 100644 fileB
+
+$ git push origin master
+Username for 'https://github.com': oleseasoilita
+Password for 'https://oleseasoilita@github.com': 
+Counting objects: 6, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 786 bytes | 786.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/oleseasoilita/theFirst.git
+   dbb6bd8..a848eb9  master -> master
+
+~/Documents/theFirst$ git pull
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 6 (delta 0), reused 6 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+From https://github.com/oleseasoilita/theFirst
+   dbb6bd8..a848eb9  master     -> origin/master
+Updating dbb6bd8..a848eb9
+Fast-forward
+ fileA | 1 +
+ fileB | 2 ++
+ 2 files changed, 3 insertions(+)
+ create mode 100644 fileA
+ create mode 100644 fileB
+
+
+$ git status       (вторая)
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   task1.1_answer
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+~/Documents/theFirst$ git status     (первая)
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   task1.1_answer
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+~/Documents/theFirst$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   fileA
+	modified:   task1.1_answer
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+~/Documents/theFirst$ rm fileB
+olesea@olesea-VirtualBox:~/Documents/theFirst$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   fileA
+	deleted:    fileB
+	modified:   task1.1_answer
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
 
