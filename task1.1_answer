@@ -384,4 +384,53 @@ Date:   Wed Oct 21 16:01:52 2020 +0300
     theFirst
 
 
+~/Documents/theFirst$ git checkout -b 'feature1'
+Switched to a new branch 'feature1'
+olesea@olesea-VirtualBox:~/Documents/theFirst$ git add -A
+olesea@olesea-VirtualBox:~/Documents/theFirst$ git commit 'updateAndChange'
+error: pathspec 'updateAndChange' did not match any file(s) known to git.
+olesea@olesea-VirtualBox:~/Documents/theFirst$ git commit -m 'updateAndChange'
+[feature1 1c7fc6f] updateAndChange
+ 2 files changed, 139 insertions(+)
+olesea@olesea-VirtualBox:~/Documents/theFirst$ git push
+fatal: The current branch feature1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin feature1
+
+olesea@olesea-VirtualBox:~/Documents/theFirst$ git push --set-upstream origin feature1
+Username for 'https://github.com': oleseasoilita
+Password for 'https://oleseasoilita@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.06 KiB | 1.06 MiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'feature1' on GitHub by visiting:
+remote:      https://github.com/oleseasoilita/theFirst/pull/new/feature1
+remote: 
+To https://github.com/oleseasoilita/theFirst.git
+ * [new branch]      feature1 -> feature1
+Branch 'feature1' set up to track remote branch 'feature1' from 'origin'.
+
+
+
+~/Downloads/second$ git checkout -b 'feature2'
+Switched to a new branch 'feature2'
+olesea@olesea-VirtualBox:~/Downloads/second$ git branch
+* feature2
+  master
+
+
+~/Downloads/second$ git pull origin feature1
+From https://github.com/oleseasoilita/theFirst
+ * branch            feature1   -> FETCH_HEAD
+Updating befad86..1c7fc6f
+Fast-forward
+ fileB          |   2 +
+ task1.1_answer | 137 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 139 insertions(+)
+
 
