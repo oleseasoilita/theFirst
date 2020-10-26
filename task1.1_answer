@@ -247,6 +247,7 @@ Date:   Wed Oct 21 16:01:52 2020 +0300
     theFirst
 
 
+
 ~/Documents/theFirst$ git checkout a848eb9 fileB
 olesea@olesea-VirtualBox:~/Documents/theFirst$ git add fileB
 olesea@olesea-VirtualBox:~/Documents/theFirst$ git commit -m 'restoreFileB'
@@ -382,6 +383,20 @@ Author: Шоилица Олеся <o.carpov@reg.ru>
 Date:   Wed Oct 21 16:01:52 2020 +0300
 
     theFirst
+
+
+~/Downloads/second$ git checkout feature2
+Switched to branch 'feature2'
+olesea@olesea-VirtualBox:~/Downloads/second$ git branch
+* feature2
+  master
+
+~/Downloads/second$ git branch -a
+* feature2
+  master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/feature1
+  remotes/origin/master
 
 
 
