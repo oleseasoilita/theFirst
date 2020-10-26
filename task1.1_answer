@@ -247,4 +247,141 @@ Date:   Wed Oct 21 16:01:52 2020 +0300
     theFirst
 
 
+~/Documents/theFirst$ git checkout a848eb9 fileB
+olesea@olesea-VirtualBox:~/Documents/theFirst$ git add fileB
+olesea@olesea-VirtualBox:~/Documents/theFirst$ git commit -m 'restoreFileB'
+[master befad86] restoreFileB
+ 1 file changed, 2 insertions(+)
+ create mode 100644 fileB
+olesea@olesea-VirtualBox:~/Documents/theFirst$ git push
+Username for 'https://github.com': oleseasoilita
+Password for 'https://oleseasoilita@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 462 bytes | 462.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/oleseasoilita/theFirst.git
+   6b93279..befad86  master -> master
+
+~/Documents/theFirst$ git pull
+Already up to date.
+olesea@olesea-VirtualBox:~/Documents/theFirst$ cd
+olesea@olesea-VirtualBox:~$ cd Downloads
+olesea@olesea-VirtualBox:~/Downloads$ cd second
+olesea@olesea-VirtualBox:~/Downloads/second$ git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/oleseasoilita/theFirst
+   6b93279..befad86  master     -> origin/master
+Updating 6b93279..befad86
+Fast-forward
+ fileB | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 fileB
+
+~/Downloads/second$ git log
+commit befad86a6eb40bf637105447794888304bab5f2a (HEAD -> master, origin/master, origin/HEAD)
+Author: Шоилица Олеся <o.carpov@reg.ru>
+Date:   Mon Oct 26 11:57:21 2020 +0200
+
+    restoreFileB
+
+commit 6b93279d5c0734d403a753252f11bd30997efc7f
+Merge: 8892341 4087075
+Author: Шоилица Олеся <o.carpov@reg.ru>
+Date:   Mon Oct 26 11:32:44 2020 +0200
+
+    log1
+
+commit 8892341b7c47838fa5918f82f4dfc524cecd5a0c
+Author: Шоилица Олеся <o.carpov@reg.ru>
+Date:   Mon Oct 26 09:21:39 2020 +0200
+
+    log
+
+commit 4087075b458d8d0a575cda8ee99b361cc57c72c2
+Author: Шоилица Олеся <o.carpov@reg.ru>
+Date:   Thu Oct 22 17:34:53 2020 +0300
+
+    change_theFirst
+
+commit a848eb9691dd6fd95ff694380356f23716775a93
+Author: Шоилица Олеся <o.carpov@reg.ru>
+Date:   Thu Oct 22 16:30:28 2020 +0300
+
+    fileB
+
+commit 4cd23f7637bae608c3db397ccf08d7abcb968870
+Author: Шоилица Олеся <o.carpov@reg.ru>
+Date:   Thu Oct 22 12:06:23 2020 +0300
+
+    fileA
+
+commit dbb6bd8b0ce331fe05da2584c3f48ae520969e91
+Author: Шоилица Олеся <o.carpov@reg.ru>
+Date:   Wed Oct 21 16:21:15 2020 +0300
+
+    theFirst1
+
+commit 6e030568d089aa16fa9e97cf54f5900d04c05066
+Author: Шоилица Олеся <o.carpov@reg.ru>
+Date:   Wed Oct 21 16:01:52 2020 +0300
+
+    theFirst
+
+~/Documents/theFirst$ git log
+commit befad86a6eb40bf637105447794888304bab5f2a (HEAD -> master, origin/master)
+Author: Шоилица Олеся <o.carpov@reg.ru>
+Date:   Mon Oct 26 11:57:21 2020 +0200
+
+    restoreFileB
+
+commit 6b93279d5c0734d403a753252f11bd30997efc7f
+Merge: 8892341 4087075
+Author: Шоилица Олеся <o.carpov@reg.ru>
+Date:   Mon Oct 26 11:32:44 2020 +0200
+
+    log1
+
+commit 8892341b7c47838fa5918f82f4dfc524cecd5a0c
+Author: Шоилица Олеся <o.carpov@reg.ru>
+Date:   Mon Oct 26 09:21:39 2020 +0200
+
+    log
+
+commit 4087075b458d8d0a575cda8ee99b361cc57c72c2
+Author: Шоилица Олеся <o.carpov@reg.ru>
+Date:   Thu Oct 22 17:34:53 2020 +0300
+
+    change_theFirst
+
+commit a848eb9691dd6fd95ff694380356f23716775a93
+Author: Шоилица Олеся <o.carpov@reg.ru>
+Date:   Thu Oct 22 16:30:28 2020 +0300
+
+    fileB
+
+commit 4cd23f7637bae608c3db397ccf08d7abcb968870
+Author: Шоилица Олеся <o.carpov@reg.ru>
+Date:   Thu Oct 22 12:06:23 2020 +0300
+
+    fileA
+
+commit dbb6bd8b0ce331fe05da2584c3f48ae520969e91
+Author: Шоилица Олеся <o.carpov@reg.ru>
+Date:   Wed Oct 21 16:21:15 2020 +0300
+
+    theFirst1
+
+commit 6e030568d089aa16fa9e97cf54f5900d04c05066
+Author: Шоилица Олеся <o.carpov@reg.ru>
+Date:   Wed Oct 21 16:01:52 2020 +0300
+
+    theFirst
+
+
 
