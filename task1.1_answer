@@ -399,4 +399,101 @@ olesea@olesea-VirtualBox:~/Downloads/second$ git branch
   remotes/origin/master
 
 
+~/Downloads/second$ git add -A
+olesea@olesea-VirtualBox:~/Downloads/second$ git commit -m 'previev'
+[feature2 59ecbae] previev
+ 1 file changed, 13 insertions(+)
+olesea@olesea-VirtualBox:~/Downloads/second$ git push
+fatal: The current branch feature2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin feature2
+
+olesea@olesea-VirtualBox:~/Downloads/second$ git push --set-upstream origin feature2
+Username for 'https://github.com': oleseasoilita
+Password for 'https://oleseasoilita@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 422 bytes | 422.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'feature2' on GitHub by visiting:
+remote:      https://github.com/oleseasoilita/theFirst/pull/new/feature2
+remote: 
+To https://github.com/oleseasoilita/theFirst.git
+ * [new branch]      feature2 -> feature2
+Branch 'feature2' set up to track remote branch 'feature2' from 'origin'.
+
+16. В первом репозитории получи все изменения из центрального репозитория. Верни ветку master к состоянию до слияния с веткой feature1. Влей в master ветку feature2. task1.1_answer после слияния должен содержать все изменения, выполненные в любых ветках.
+~/Documents/theFirst$ git pull
+Updating befad86..9bc1845
+Fast-forward
+ fileB          |   2 +
+ task1.1_answer | 186 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 188 insertions(+)
+
+
+~/Documents/theFirst$ git reset 1c7fc6f
+Unstaged changes after reset:
+M	fileB
+M	task1.1_answer
+~/Documents/theFirst$ git checkout -b feature2 origin/feature2
+Branch 'feature2' set up to track remote branch 'feature2' from 'origin'.
+Switched to a new branch 'feature2'
+olesea@olesea-VirtualBox:~/Documents/theFirst$ git branch
+  feature1
+* feature2
+  master
+olesea@olesea-VirtualBox:~/Documents/theFirst$ git checkout master
+Switched to branch 'master'
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+olesea@olesea-VirtualBox:~/Documents/theFirst$ git merge feature2
+Auto-merging task1.1_answer
+CONFLICT (content): Merge conflict in task1.1_answer
+Automatic merge failed; fix conflicts and then commit the result.
+olesea@olesea-VirtualBox:~/Documents/theFirst$ git status
+On branch master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+	both modified:   task1.1_answer
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+17. Просмотри графический лог. Удали ветку feature1 (в том числе из центрального репозитория).
+
+~/Documents/theFirst$ git log --graph --oneline 
+* 214db29 (HEAD -> master, origin/master) reset master and merge feature2 to master
+* 1c7fc6f (origin/feature1, feature1) updateAndChange
+* befad86 restoreFileB
+*   6b93279 log1
+|\  
+| * 4087075 change_theFirst
+* | 8892341 log
+|/  
+* a848eb9 fileB
+* 4cd23f7 fileA
+* dbb6bd8 theFirst1
+* 6e03056 theFirst
+~/Documents/theFirst$ git branch -d feature1
+Deleted branch feature1 (was 1c7fc6f).
+
+~/Documents/theFirst$ git push origin --delete feature1
+Username for 'https://github.com': oleseasoilita
+Password for 'https://oleseasoilita@github.com': 
+To https://github.com/oleseasoilita/theFirst.git
+ - [deleted]         feature1
+
+
 
